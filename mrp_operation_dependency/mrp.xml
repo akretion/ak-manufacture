@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="mrp_routing_workcenter_form_view" model="ir.ui.view">
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_workcenter_form_view" />
+            <field name="arch" type="xml">
+                <label for="note" position="before">
+                    <label for="dependency_ids"/>
+                    <field name="dependency_ids"/>
+                </label>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_production_workcenter_tree_view">
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id"
+                   ref="mrp_operations.mrp_production_workcenter_tree_view_inherit"/>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="pending"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="mrp_production_workcenter_form_view_inherit" model="ir.ui.view">
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id"
+                   ref="mrp_operations.mrp_production_workcenter_form_view_inherit"/>
+            <field name="arch" type="xml">
+
+                <field name="production_state" position="after">
+                    <field name="pending"/>
+                </field>
+                <xpath expr="//page" position="inside">
+                    <separator string="Dependency" colspan="4"/>
+                    <field name="dependency_ids" nolabel="True" colspan="4"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
