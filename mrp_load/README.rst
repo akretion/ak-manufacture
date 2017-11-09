@@ -7,6 +7,8 @@ MRP Load
 ========
 
 * Compute work load on workcenter
+* Compute work capacity on workcenter
+* Set workcenter online or offline
 * Allow to switch to other workcenters to adjust activity in the plant
 * The following options are not supported on the workcenter
     * Time for 1 cycle (hour)
@@ -27,12 +29,7 @@ Usage
 
 To use this module, you need to go to:
 
- * Manufacturing > ...
-
-For further information, please visit:
-
- * https://www.odoo.com/forum/help-1
-
+ * Manufacturing > Planning > Load
 
 
 Credits

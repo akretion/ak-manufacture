@@ -3,11 +3,11 @@
    :alt: License: AGPL-3
 
 ===========================
-MRP Workcenter Hierarchical
+MRP Operation Dependency
 ===========================
 
-* Add the possibility to define a parent workcenter to a workcenter
-It allows to classify the workcenters by type for instance we can group the assembling workcenters together, the cutting workcenters, etc...
+* Add the possibility make to workorders depend on an other workorder.
+A workorder depending on another one, not done yet, is marked as pending
 
 Installation
 ============
@@ -28,11 +28,7 @@ Usage
 
 To use this module, you need to go to:
 
- * Manufacturing > Configuration > Work Centers
-
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/129/9.0
+ * Manufacturing > Configuration > Routing, configure the dependencies between operations
 
 Credits
 =======

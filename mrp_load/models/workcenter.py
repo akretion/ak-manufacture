@@ -147,7 +147,8 @@ class MrpWorkcenter(models.Model):
         calendar = self._get_calendar()
         date_from = datetime.now()
         date_to = self._get_capacity_date_to(date_from)
-        return self.env['resource.calendar']._interval_hours_get(
+        return self.pool['resource.calendar']._interval_hours_get(
+            self._cr, self._uid,
             calendar.id, date_from, date_to,
             timezone_from_uid=self._uid)
 
